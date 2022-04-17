@@ -2,6 +2,7 @@
 import csv
 import os
 
+
 # Add a variable to load a file from a path.
 
 file_to_load = (r"C:\Users\ejche\Documents\GitHub\Election-Analysis\Resources\election_results.csv.csv")
@@ -92,25 +93,28 @@ with open(file_to_save, "w") as txt_file:
     # 6a: Write a for loop to get the county from the county dictionary.
     for county in county_votes:
         # 6b: Retrieve the county vote count.
-        county_votes.get(county)
+        county_vote_count = county_votes.get(county)
         # 6c: Calculate the percentage of votes for the county.
-        county_percentage = county / total_votes
-
+        votes_percentage = float(county_vote_count) / float(total_votes) * 100
+        county_results = (f"{county}: {votes_percentage:.1f}% ({county_vote_count:,}) \n")
          # 6d: Print the county results to the terminal.
-        print(county_percentage)
+        print(county_results)
          # 6e: Save the county votes to a text file.
-        txt_file.write(f"{county}: {county_percentage}")
+        txt_file.write(f"{county}: {county_vote_count:,}\n")
          # 6f: Write an if statement to determine the winning county and get its vote count.
-        if county_votes(county) > county_votes(county - 1) & county_votes(county) > county_votes(county + 1):
-            largest_count = county
-
-
+        #if (county_vote_count(county) > county_vote_count(county - 1)) & (county_vote_count(county) > county_vote_count(county + 1)):
+           # largest_count = (county)
+            
 
     # 7: Print the county with the largest turnout to the terminal.
-    print(f"Largest County Turnout:{largest_count}")
+    print(f"-----------------------\n"
+        "Largest County Turnout: {largest_count}\n"
+        "-------------------------")
 
     # 8: Save the county with the largest turnout to a text file.
-
+    txt_file.write(f"-----------------------\n"
+        "Largest County Turnout: {largest_count} \n"
+        "-------------------------\n")
 
     # Save the final candidate vote count to the text file.
     for candidate_name in candidate_votes:

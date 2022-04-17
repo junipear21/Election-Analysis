@@ -1,1 +1,8 @@
 # Election-Analysis
+## Overview of Election Audit
+- The porpose of the election audit was to identify the winning candidate among three New Mexico counties using voter data. I also identified the largest voting county, the percentages of votes that each candidate got, and the total number of votes. 
+## Election Audit Results
+-From the election results, we can see that 369,711 votes were cast in total between the three counties. Jefferson county contributed 10.5% of the vote with 38,855 votes, Denver county contributed 82.8% of the vote with 306,055 votes, and Arapahoe county contributed %of the vote with 24,801 votes. Denver county had the largest number of votes.
+-Charles Casper Stockham received 23% of the votes with 85,213 votes, Dianne DeGette received 73.8% of the votes with 272,892 votes, and Raymon Anthony Doane received 3.1% of the votes with 11,606 votes. Dianne Degette won the Election in a landslide with 272,892 votes, making up 73.8% of the total votes.
+## Election Audit Summary
+-THis script is easily interchangable as it will take in any voting data set, record the counties and thge candidates, count them up, and rank them. One way thius cript could be modified is to account for campaign funding. You could add up donations for each campaign and find out the average donation per voter. Another application could be that you add a second vote to support a ranked choice election.
